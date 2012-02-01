@@ -53,6 +53,7 @@ exports.response = function (callback, data, extensions) {
         // standard JSON request
         res = {
             code: 200,
+            headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
         };
     }
@@ -60,6 +61,7 @@ exports.response = function (callback, data, extensions) {
         // invalid JSONP callback name
         res = {
             code: 400,
+            headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
                 error:"bad_request",
                 reason:"invalid_callback"
@@ -70,6 +72,7 @@ exports.response = function (callback, data, extensions) {
         // JSONP request
         res = {
             code: 200,
+            headers: {"Content-Type": "application/json"},
             body: callback + '(' + JSON.stringify(data) + ');'
         };
     }
