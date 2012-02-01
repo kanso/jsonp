@@ -57,7 +57,7 @@ exports.response = function (callback, data, extensions) {
             body: JSON.stringify(data)
         };
     }
-    else if (!utils.validFunctionName(callback)) {
+    else if (!exports.validFunctionName(callback)) {
         // invalid JSONP callback name
         res = {
             code: 400,
