@@ -4,6 +4,7 @@
     "description": "Utilities for making JSONP responses from CouchDB",
     "modules": ["jsonp.js"],
     "dependencies": {
-        "modules": null
+        "modules": null,
+        "underscore": null
     }
 }
