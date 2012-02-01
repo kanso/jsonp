@@ -53,7 +53,7 @@ exports.response = function (callback, data, extensions) {
         // standard JSON request
         res = {
             code: 200,
-            body: JSON.stringify(data);
+            body: JSON.stringify(data)
         };
     }
     else if (!utils.validFunctionName(callback)) {
